@@ -11,7 +11,7 @@ HOMEPAGE="https://libcxx.llvm.org/"
 
 LICENSE="Apache-2.0-with-LLVM-exceptions || ( UoI-NCSA MIT )"
 SLOT="0"
-KEYWORDS="amd64 arm arm64 ~riscv sparc x86 ~x64-macos"
+KEYWORDS="amd64"
 IUSE="+libcxxabi +libunwind +static-libs test"
 RESTRICT="!test? ( test )"
 REQUIRED_USE="libunwind? ( libcxxabi )"
@@ -35,7 +35,7 @@ BDEPEND="
 	)
 	test? (
 		>=llvm-core/clang-3.9.0
-		sys-devel/gdb[python]
+		dev-debug/gdb[python]
 		$(python_gen_any_dep 'dev-python/lit[${PYTHON_USEDEP}]')
 	)
 "

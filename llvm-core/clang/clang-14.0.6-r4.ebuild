@@ -15,7 +15,7 @@ HOMEPAGE="https://llvm.org/"
 
 LICENSE="Apache-2.0-with-LLVM-exceptions UoI-NCSA MIT"
 SLOT="$(ver_cut 1)"
-KEYWORDS="amd64 arm arm64 riscv x86 amd64-linux"
+KEYWORDS="amd64"
 IUSE="
 	debug default-compiler-rt default-libcxx default-lld doc
 	llvm-libunwind +pie +static-analyzer test xml
@@ -43,7 +43,7 @@ BDEPEND="
 "
 PDEPEND="
 	llvm-core/clang-common
-	~llvm-core/clang-runtime-${PV}
+	~llvm-runtimes/clang-runtime-${PV}
 	default-compiler-rt? (
 		=llvm-runtimes/compiler-rt-${PV%_*}*
 		llvm-libunwind? ( llvm-runtimes/libunwind )
