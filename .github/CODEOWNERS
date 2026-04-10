@@ -1,0 +1,4 @@
+# CODEOWNERS for llvm14 overlay
+# See https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-security/customizing-your-repository/about-code-owners
+
+* @IvanAnishchuk
